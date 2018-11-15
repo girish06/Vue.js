@@ -1,0 +1,25 @@
+<html>
+ <head>
+   <title>vue js part-3</title>
+ </head>
+<body>
+  <div id ='app'>
+    <h1 v-bind:title="message">{{message}}</h1>
+    <img v-bind:src="url" v-bind:title ="title" v-bind:alt="alt"/>
+  </div>
+</body>
+<script src ="https://unpkg.com/vue@2.5.17/dist/vue.js"></script>
+<script>
+
+var app = new Vue({
+ el: '#app',
+ data: {
+   message : 'Welcome to vue js',
+   url: "https://vuejs.org/images/logo.png",
+   alt: 'alt-vue',
+   title: 'title-vue' + new Date(),
+ }
+})
+</script>
+
+</html>
