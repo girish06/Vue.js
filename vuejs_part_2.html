@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>vuejs part-1</title>
+    <style>
+     [v-cloak] {
+      display: none;
+     }
+    </style>
+  </head>
+  <body>
+    <div id ='app'>
+      <h1 v-cloak>{{message}}</h1>
+      <h1 v-once>{{message}}</h1>
+      <h2 v-text ="msg"></h2>
+      <h2 v-html ="msg"></h2>
+      <p v-show ="show">vue js data is shown</p>
+      <p v-if="seen">Now you see me</p>
+      <p v-else>Now you have not seen me</p>
+      <p v-pre>{{pretag}}</p>
+    </div>
+  <body>
+    <script src ="https://unpkg.com/vue@2.5.17/dist/vue.js"></script>
+    <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        message: 'Hello, welcome to Vue js',
+        message2: 'Hello, welcome to Vue js with once function',
+        msg: "<small>Text messages</small>",
+        show: true,
+        seen: false,
+        pretag: 'pretag'
+      }
+    })
+    </script>
+</html>
