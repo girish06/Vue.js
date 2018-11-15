@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>vue js part-6</title>
+  <head>
+    <body>
+      <div id ="app">
+        <h1>{{message}}</h1>
+        <p>count: {{count}}</p>
+        <input type="text" v-model="message" />
+        <button v-on:click="countUp">Click me.....!</button>
+      </div>
+    </body>
+    <script src ="https://unpkg.com/vue@2.5.17/dist/vue.js"></script>
+    <script>
+     var app = new Vue({
+      el: '#app',
+      data: {
+       message: 'welcome to vue js',
+       count: 0
+     },
+      methods: {
+        countUp: function(){
+          this.count =+1
+        }
+      }
+     })
+    </script>
+</html>

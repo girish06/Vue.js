@@ -1,0 +1,33 @@
+<html>
+<head>
+  <title>vue js part-7</title>
+</head>
+<body>
+  <div id ="app">
+     <h1>{{message}}</h1>
+     <h2>Hello {{fullname}}</h2>
+     <h3>first name: {{first}}</h3>
+     <h3>last name: {{last}}</h3>
+     first Name<input type ="text" v-model="first" />
+     Second Name<input type ="text" v-model="last" />
+  </div>
+</body>
+<script src ="https://unpkg.com/vue@2.5.17/dist/vue.js"></script>
+<script>
+
+ var app = new Vue({
+  el: '#app',
+  data: {
+    message: 'computed properties',
+    first: '',
+    last: '',
+  },
+  computed: {
+    fullname: function() {
+      return this.first + " " +this.last
+    }
+  }
+ })
+
+</script>
+</html>
