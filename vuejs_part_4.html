@@ -1,0 +1,26 @@
+<html>
+ <head>
+   <title>vue js part-4</title>
+ <head>
+ <body>
+   <div id ='app'>
+     <ul>
+       <li v-for="todo in todos">{{todo.text}}</li>
+     </ul>
+   </div>
+ <body>
+  <script src ="https://unpkg.com/vue@2.5.17/dist/vue.js"></script>
+   <script>
+    var app = new Vue({
+     el: '#app',
+     data : {
+        message : 'welcome to vuejs -developers',
+        todos : [
+          { text: 'Girish' },
+          { text: 'developer' },
+          { text: 'skills' }
+        ]
+     }
+    })
+   </script>
+</html>
